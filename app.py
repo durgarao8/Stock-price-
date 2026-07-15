@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import streamlit as slt 
-import matplotlib.pyplot as plt
+
 import joblib
 import os
 
@@ -30,9 +30,9 @@ company_df=df[df["Symbol"]==selected_company]
 slt.subheader(selected_company)
 slt.dataframe(company_df.tail())
 
-#slt.line_chart(company_df.set_index("Date")["Close"])
+slt.line_chart(company_df.set_index("Date")["Close"])
 
-#slt.bar_chart(company_df.set_index("Date")["Volume"])
+slt.bar_chart(company_df.set_index("Date")["Volume"])
 
 slt.subheader("Enter Today's Market Values")
 
