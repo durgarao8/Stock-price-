@@ -17,7 +17,7 @@ slt.write(
     "Predict tomorrow's closing price using Machine Learning."
 )
 
-df = pd.read_csv("dataset/NIFTY50_all.csv")
+df = pd.read_csv("dataset/NIFTY50_all.csv.gz", compression="gzip")
 companies=sorted(df["Symbol"].unique())
 selected_company=slt.sidebar.selectbox("Select company",companies)
 
