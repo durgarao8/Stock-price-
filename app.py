@@ -57,6 +57,13 @@ if slt.button("Predict Tomorrow Closing Price"):
         daily_return = ((close - open_price) / open_price) * 100
     else:
         daily_return = 0
+    slt.subheader("📊 Calculated Features")
+
+    slt.write(f"**Price Change:** {price_change:.2f}")
+
+    slt.write(f"**High-Low Difference:** {high_low_difference:.2f}")
+
+    slt.write(f"**Daily Return:** {daily_return:.2f}%")
 
     feature_names = [
     "Prev Close",
