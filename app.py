@@ -30,7 +30,17 @@ company_df=df[df["Symbol"]==selected_company]
 slt.subheader(selected_company)
 slt.dataframe(company_df.tail())
 
+
+slt.subheader("📈 Closing Price Trend")
+
+slt.write("This chart shows the historical closing price of the selected company.")
+
 slt.line_chart(company_df.set_index("Date")["Close"])
+
+
+slt.subheader("📊 Trading Volume Trend")
+
+slt.write("This chart shows the daily trading volume of the selected company.")
 
 slt.bar_chart(company_df.set_index("Date")["Volume"])
 
