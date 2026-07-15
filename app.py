@@ -42,9 +42,9 @@ high=slt.number_input(f"Enter High Price {selected_company}")
 low=slt.number_input(f"Enter the Low Price {selected_company}")
 close = slt.number_input("Today's Close")
 vwap=slt.number_input(f"Enter VWAP {selected_company}")
-volume=slt.number_input(f"Enter Volume in that Day {selected_company}")
-trades=slt.number_input(f"Enter Number of Trades {selected_company}")
-deliverable=slt.number_input(f"Enter Deliverbale volume {selected_company}")
+volume=slt.number_input(f"Enter Volume in that Day {selected_company}",min_value=0,value=4850000,step=1000,format="%d")
+trades=slt.number_input(f"Enter Number of Trades {selected_company}",min_value=0,value=98500,step=100,format="%d")
+deliverable=slt.number_input(f"Enter Deliverbale volume {selected_company}",min_value=0,value=2420000,step=1000,format="%d")
 percent=slt.number_input(f"Enter Deliverable volume  Percantage {selected_company}")
 
 if slt.button("Predict Tomorrow Closing Price"):
